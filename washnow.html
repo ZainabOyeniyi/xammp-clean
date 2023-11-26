@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wash.now</title>
+    <style>
+        /* Apply styles to the body to make it a flex container */
+        body {
+          display: flex;
+          align-items: center; /* Center vertically */
+          justify-content: center; /* Center horizontally */
+          height: 100vh; /* Set the height of the container to the full viewport height */
+          margin: 0; /* Remove default margin to ensure the fieldset is truly centered */
+        }
+    
+        /* Style the centered fieldset */
+        .container {
+          text-align: center;
+        }
+    
+        fieldset {
+          width: 500px; /* Set the width of the fieldset */
+          height: 700px;
+          padding: 20px;
+          border: 6px solid #3498db; 
+          border-radius: 5px; 
+          background-color: #ecf0f1;
+        }
+        legend {
+          color: #3498db; /* Set the color of the legend text */
+          font-weight: bold;
+          font-size: 70px;
+        }
+        body {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAelhs4W1Q6g5yohdPjaeatAoIx41Q6PYA3A&usqp=CAU'); /* Replace 'your-image.jpg' with the path to your image file */
+      background-size: cover; /* Cover the entire viewport */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      height: 100vh; /* Set the height of the body to the full viewport height */
+      margin: 0; /* Remove default margin */
+      image-rendering: pixelated;
+    }
+    label {
+        font-size: 30px;
+        color: #3498db;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+    input {
+        font-size: 30px;
+        padding: 10px;
+    }
+    select{
+        font-size: 30px;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.5); /* Adjust the scale factor to make the checkbox bigger */
+      margin-right: 8px; /* Add some spacing between the checkbox and label text */
+    }
+    textarea {
+      width: 200px; /* Set the width of the textarea */
+      height: 100px; /* Set the height of the textarea */
+      padding: 10px; /* Add some padding for better appearance */
+      font-size: 14px; /* Set the font size of the text inside the textarea */
+    }
+  
+      </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend><strong>wash.now</strong></legend>
+
+            <input type="checkbox" id="item1" name="item1" value="item1">
+            <label for="item1">traditionals - 500</label>
+            <br>
+            <input type="checkbox" id="item2" name="item2" value="item1">
+            <label for="item2">shirt - 200</label>
+            <br>
+            <input type="checkbox" id="item3" name="item3" value="item3">
+            <label for="item3">trousers - 100</label>
+            <br>
+            <input type="checkbox" id="item4" name="item4" value="item4">
+            <label for="item4">skirts- 100</label>
+            <br>
+            <input type="checkbox" id="item5" name="item5" value="item5">
+            <label for="item5">gowns - 400</label>
+             
+             <br>
+             <br>
+             <label for="quantity">Quantity (between 1 and 20):</label>
+             <input type="number" id="quantity" name="quantity" min="1" max="20">
+             <br>
+             <br>
+             <label for="others">others: </label><br>
+             <input type="text" id="others" name="others">
+             <br>
+             <br>
+             <label for="instruction"> any instruction:</label>
+             <br>
+             <textarea placeholder="type your instruction"></textarea>
+             <br>
+             <input type="submit" value="submit">
+
+
+
+        </fieldset>
+       
+    </form>
+</body>
+</html>

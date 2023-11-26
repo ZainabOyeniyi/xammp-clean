@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Bookings</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <script src="https://kit.fontawesome.com/2f00a9640e.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="home.css">
+        </head>
+        <body>
+                
+            <div class="form">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Tab2')" id="defaultOpen">IRON</button>
+                    <button class="tablinks" onclick="openTab(event, 'Tab3')">FULL PACKAGE</button>
+                </div>
+                
+               
+                
+                <div id="Tab2" class="tabcontent">
+                    <form>
+                        <label for="clothes" id="clabel">Which cloth do you wish to iron?</label><br>
+    
+                        <select id="clothes" name="clothes" >
+                            <option value="Shirt">Shirt - 100</option>
+                            <option value="Trouser">Trouser - 100</option>
+                            <option value="Gown">Gown - 150</option>
+                            <option value="Short">Short - 100</option>
+                            <option value="Traditional">Traditional - 200</option>
+                            <option value="Fabric">Fabric - 300</option>
+                        </select><br><br>
+    
+                        <label for="numberInput" id="clabel">Enter a the quantity (maximum of 10 orders) </label><br>
+                        <input type="number" id="numberInput" name="numberInput" min="1" max="10"><br><br>
+
+                        <label for="others" id="clabel">If others, please specify</label>
+                        <input type="text" id="others" name="others"><br><br>
+                        
+                        <p id="clabel">Do you want starch?</p>
+                        <input type="radio" id="yes" name="starch" value="yes">
+                        <label for="yes">YES</label>
+                        <input type="radio" id="no" name="starch" value="no">
+                        <label for="no">NO</label>
+                    </form>
+                </div>
+                
+                <div id="Tab3" class="tabcontent">
+                    <form>
+                        <label for="clothes" id="clabel">Which cloth do you wish to wash and iron?</label><br>
+    
+                        <select id="clothes" name="clothes" >
+                            <option value="Shirt">Shirt - 200</option>
+                            <option value="Trouser">Trouser - 200</option>
+                            <option value="Gown">Gown - 250</option>
+                            <option value="Short">Short - 200</option>
+                            <option value="Traditional">Traditional - 300</option>
+                            <option value="Fabric">Fabric - 500</option>
+                        </select><br><br>
+    
+                        <label for="numberInput" id="clabel">Enter a the quantity (maximum of 10 orders) </label><br>
+                        <input type="number" id="numberInput" name="numberInput" min="1" max="10"><br><br>
+
+                        <label for="others" id="clabel">If others, please specify</label>
+                        <input type="text" id="others" name="others"><BR><br>
+
+                        <p id="clabel">Do you want starch?</p>
+                        <input type="radio" id="yes" name="starch" value="yes">
+                        <label for="yes">YES</label>
+                        <input type="radio" id="no" name="starch" value="no">
+                        <label for="no">NO</label>
+                    </form>
+                </div>
+                
+            </div>
+                    <script>
+                        document.getElementById("defaultOpen").click();
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+                    </script>
+        </body>
+    </html>

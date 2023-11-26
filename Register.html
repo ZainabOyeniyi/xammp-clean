@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Register.css"/>
+</head>
+<body>
+    <div class="register">
+        <div class="box2">
+            <div class="txt">
+                <h1>USER REGISTRATION</h1>
+            </div>
+            <div class="all">
+                <form action="register.php" method="post">
+                    <div class="first">
+                        <input type="text" class="firstname" placeholder="First Name" required id="firstname" name="firstname" />
+                        <input type="text" class="lastname" placeholder="Last Name" required id="lastname" name="lastname" />
+                    </div>
+                    <div class="second">
+                        <input type="email" class="email" placeholder="E-mail" required id="email" name="email" />
+                        <input type="tel" class="tel" placeholder="Phone Number" required id="tel" name="tel" />
+                    </div>
+                    <div class="third">
+                        <select class="typ" name="service_type">
+                            <option><h3>Select service type</h3></option>
+                            <option value="Washing">Washing</option>
+                            <option value="Ironing">Ironing</option>
+                            <option value="Full Package">Full Package</option>
+                        </select>
+                    </div>
+                    <div class="pick">
+                        <input type="date" class="date" placeholder="Pick-up Date" required id="date" name="date" />
+                        <input type="text" class="hall" placeholder="Hall" required id="hall" name="hall" />
+                        <input type="number" class="number" placeholder="Room Number" required id="number" name="number" />
+                    </div>
+                    <div class="enter">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

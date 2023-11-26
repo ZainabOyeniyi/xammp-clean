@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style the tabs */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: lightseagreen;
+        }
+
+        /* Style the tab links */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of tabs on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'WASH')" id="defaultOpen">WASH</button>
+    <button class="tablinks" onclick="openTab(event, 'IRON')">IRON</button>
+    <button class="tablinks" onclick="openTab(event, 'FULLPACKAGE')">FULLPACKAGE</button>
+</div>
+
+<div id="WASH" class="tabcontent">
+    <label for="clothes">Which cloth do you wish to clean?</label><br>
+    <input type="checkbox" id="item1" name="item1" value="item1">
+            <label for="item1">traditionals - 500</label>
+            <br>
+            <input type="checkbox" id="item2" name="item2" value="item1">
+            <label for="item2">shirt - 200</label>
+            <br>
+            <input type="checkbox" id="item3" name="item3" value="item3">
+            <label for="item3">trousers - 100</label>
+            <br>
+            <input type="checkbox" id="item4" name="item4" value="item4">
+            <label for="item4">skirts- 100</label>
+            <br>
+            <input type="checkbox" id="item5" name="item5" value="item5">
+            <label for="item5">gowns - 400</label>
+             
+             <br>
+             <br>
+             <label for="quantity">Quantity (between 1 and 20):</label>
+             <input type="number" id="quantity" name="quantity" min="1" max="20">
+             <br>
+             <br>
+             <label for="others">others: </label><br>
+             <input type="text" id="others" name="others">
+             <br>
+             <br>
+             <label for="instruction"> any instruction:</label>
+             <br>
+             <textarea placeholder="type your instruction"></textarea>
+             <br>
+             <a href="paymentt.html"><input type="submit" value="submit"></a>
+
+
+</div>
+
+<div id="IRON" class="tabcontent">
+    <label for="clothes">Which cloth do you wish to iron?</label><br>
+    <input type="checkbox" id="item1" name="item1" value="item1">
+            <label for="item1">traditionals - 500</label>
+            <br>
+            <input type="checkbox" id="item2" name="item2" value="item1">
+            <label for="item2">shirt - 200</label>
+            <br>
+            <input type="checkbox" id="item3" name="item3" value="item3">
+            <label for="item3">trousers - 100</label>
+            <br>
+            <input type="checkbox" id="item4" name="item4" value="item4">
+            <label for="item4">skirts- 100</label>
+            <br>
+            <input type="checkbox" id="item5" name="item5" value="item5">
+            <label for="item5">gowns - 400</label>
+             
+             <br>
+             <br>
+             <label for="quantity">Quantity (between 1 and 20):</label>
+             <input type="number" id="quantity" name="quantity" min="1" max="20">
+             <br>
+             <br>
+             <label for="others">others: </label><br>
+             <input type="text" id="others" name="others">
+             <br>
+             <br>
+             <label for="instruction"> any instruction:</label>
+             <br>
+             <textarea placeholder="type your instruction"></textarea>
+             <br>
+             <a href="paymentt.html"><input type="submit" value="submit"></a>
+
+
+
+</div>
+
+<div id="FULLPACKAGE" class="tabcontent">
+    <label for="clothes">Which cloth do you wish to iron and wash?</label><br>
+    <input type="checkbox" id="item1" name="item1" value="item1">
+            <label for="item1">traditionals - 500</label>
+            <br>
+            <input type="checkbox" id="item2" name="item2" value="item1">
+            <label for="item2">shirt - 200</label>
+            <br>
+            <input type="checkbox" id="item3" name="item3" value="item3">
+            <label for="item3">trousers - 100</label>
+            <br>
+            <input type="checkbox" id="item4" name="item4" value="item4">
+            <label for="item4">skirts- 100</label>
+            <br>
+            <input type="checkbox" id="item5" name="item5" value="item5">
+            <label for="item5">gowns - 400</label>
+             
+             <br>
+             <br>
+             <label for="quantity">Quantity (between 1 and 20):</label>
+             <input type="number" id="quantity" name="quantity" min="1" max="20">
+             <br>
+             <br>
+             <label for="others">others: </label><br>
+             <input type="text" id="others" name="others">
+             <br>
+             <br>
+             <label for="instruction"> any instruction:</label>
+             <br>
+             <textarea placeholder="type your instruction"></textarea>
+             <br>
+             <a href="paymentt.html"><input type="submit" value="submit"></a>
+
+
+
+<script>
+    // Open the default tab on page load
+    document.getElementById("defaultOpen").click();
+
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
